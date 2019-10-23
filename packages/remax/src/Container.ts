@@ -8,12 +8,14 @@ function stringPath(path: Path) {
   return path.join('.');
 }
 
-function transformRawNode(item: RawNode): RawNode {
+function normalizeRawNode(item: RawNode): RawNode {
   return {
-    ...item,
+    id: item.id,
+    text: item.text,
+    type: item.type,
     props: propsAlias(item.props),
     children: item.children
-      ? item.children.map(transformRawNode)
+      ? item.children.map(normalizeRawNode)
       : item.children,
   };
 }
@@ -54,7 +56,7 @@ export default class Container {
       path,
       start,
       deleteCount,
-      items: items.map(transformRawNode),
+      items: items.map(normalizeRawNode),
     };
     if (immediately) {
       this.updateQueue.push(update);
@@ -88,7 +90,7 @@ export default class Container {
 
     if (Platform.isToutiao) {
       tree = {
-        root: transformRawNode(this.root.toJSON()),
+        root: normalizeRawNode(this.root.toJSON()),
       };
     }
 

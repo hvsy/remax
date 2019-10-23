@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './helpers/setupGlobals';
-import { render, View } from '../../../src/adapters/alipay';
+import { render, View } from '../../../src/adapters/wechat';
 import { reset } from '../../instanceId';
 import Container from '../../Container';
 
@@ -157,7 +157,7 @@ describe('remax render', () => {
       return view.current.container.context[fnKey];
     }
 
-    const newHandleClick = findFn('onTap');
+    const newHandleClick = findFn('onClick');
     const newHandleAnimationStart = findFn('onAnimationStart');
 
     expect(newHandleClick).not.toBe(handleClick);
