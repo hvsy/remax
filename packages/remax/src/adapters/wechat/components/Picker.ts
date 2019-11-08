@@ -1,7 +1,7 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 import { BaseProps } from './baseTyping';
 
-const Picker = factory<PickerProps>('picker');
+const Picker = createRemaxComponent<PickerProps>('picker');
 
 export interface PickerProps extends BaseProps {
   /**

@@ -1,7 +1,7 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 import { BaseProps } from './baseTyping';
 
-const Icon = factory<IconProps>('icon');
+const Icon = createRemaxComponent<IconProps>('icon');
 
 export interface IconProps extends BaseProps {
   /** icon的类型 1.0.0  */

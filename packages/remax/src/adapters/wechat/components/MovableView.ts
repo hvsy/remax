@@ -1,7 +1,7 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 import { CSSProperties } from 'react';
 
-const MovableView = factory<MovableViewProps>('movable-view');
+const MovableView = createRemaxComponent<MovableViewProps>('movable-view');
 
 // can't extends from BaseProps, bacause this MovableViewProps overwrite animation to boolean
 export interface MovableViewProps {

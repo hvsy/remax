@@ -1,4 +1,4 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface CheckboxGroupProps {
   readonly dataset?: DOMStringMap;
@@ -8,6 +8,8 @@ export interface CheckboxGroupProps {
   onChange?: (e: any) => void;
 }
 
-const CheckboxGroup = factory<CheckboxGroupProps>('checkbox-group');
+const CheckboxGroup = createRemaxComponent<CheckboxGroupProps>(
+  'checkbox-group'
+);
 
 export default CheckboxGroup;

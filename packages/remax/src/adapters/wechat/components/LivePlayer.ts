@@ -1,7 +1,7 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 import { BaseProps } from './baseTyping';
 
-const LivePlayer = factory<LivePlayerProps>('live-player');
+const LivePlayer = createRemaxComponent<LivePlayerProps>('live-player');
 
 export interface LivePlayerProps extends BaseProps {
   /** 音视频地址。目前仅支持 flv, rtmp 格式 1.7.0  */

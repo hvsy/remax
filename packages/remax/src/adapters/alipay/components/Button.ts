@@ -1,5 +1,5 @@
 import * as React from 'react';
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface ButtonProps {
   readonly dataset?: DOMStringMap;
@@ -23,6 +23,6 @@ export interface ButtonProps {
   onTap?: (e: any) => void;
   onClick?: (e: any) => void;
 }
-export const Button = factory<ButtonProps>('button');
+export const Button = createRemaxComponent<ButtonProps>('button');
 
 export default Button;

@@ -1,7 +1,7 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 import { BaseProps } from './baseTyping';
 
-const LivePusher = factory<LivePusherProps>('live-pusher');
+const LivePusher = createRemaxComponent<LivePusherProps>('live-pusher');
 
 export interface LivePusherProps extends BaseProps {
   /** 推流地址。目前仅支持 flv, rtmp 格式 1.7.0  */

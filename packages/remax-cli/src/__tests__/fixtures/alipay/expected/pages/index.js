@@ -5,6 +5,7 @@ import '../npm/remax/esm/createAppConfig.js';
 import '../npm/remax/esm/Platform.js';
 import createPageConfig from '../npm/remax/esm/createPageConfig.js';
 import '../npm/remax/esm/index.js';
+import { createCustomRemaxComponent } from '../npm/remax/esm/createRemaxComponent.js';
 import View from '../npm/remax/esm/adapters/alipay/components/View.js';
 import '../npm/remax/esm/adapters/alipay/components/ScrollView.js';
 import '../npm/remax/esm/adapters/alipay/components/Swiper.js';
@@ -43,12 +44,15 @@ import '../npm/remax/esm/adapters/alipay/api.js';
 var _page = function _page() {
   var props = {};
   var TextElement = cloneElement(createElement(Text, null));
+  var RemaxFooBar = createCustomRemaxComponent('RemaxFooBar');
 
   function handleClick() {}
 
   function handleTouchStart() {}
 
-  return createElement(View, null, createElement(View, _extends({
+  return createElement(View, null, createElement(RemaxFooBar, {
+    foo: "bar"
+  }), createElement(View, _extends({
     onClick: handleClick,
     onTouchStart: handleTouchStart,
     id: "view",

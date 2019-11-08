@@ -6,3 +6,6 @@ export { default as Platform } from '../../Platform';
 export * from '../../hooks';
 export * from './components';
 export * from './api';
+export {
+  createCustomRemaxComponent as createRemaxComponent,
+} from '../../createRemaxComponent';

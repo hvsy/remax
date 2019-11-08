@@ -30,3 +30,34 @@ Remax
 ```html
 <view class="view" style="display: flex;" onTap="handleClick"></view>
 ```
+
+## 跟进小程序组件更新
+
+如果小程序添加了新的组件，而你所用的 Remax 版本还没提供该组件的支持，Remax 允许你自己创建一个新的 Remax 组件。
+
+假设微信小程序新增了一个 `<foo-bar>` 组件，你可以这么做以让 Remax 提前支持：
+
+```jsx
+import { createRemaxComponent } from 'remax/wechat';
+
+const RemaxFooBar = createRemaxComponent('RemaxFooBar');
+
+function Page() {
+  return <RemaxFooBar foo="bar" />;
+}
+```
+
+如果你使用的是 typescript，还可以定义 props 类型：
+
+```jsx
+import { createRemaxComponent } from 'remax/wechat';
+
+const RemaxFooBar = createRemaxComponent<{ foo: string; }>('RemaxFooBar');
+
+function Page() {
+  return <RemaxFooBar foo="bar" />;
+}
+```
+
+> 其中需要注意的是，在组件定义和使用中必须加上 Remax 前缀，并且命名规则要以实际组件名的驼峰形式命名。
+> 如 RemaxFooBar 对应于 foo-bar

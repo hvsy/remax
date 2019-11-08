@@ -1,5 +1,5 @@
 import * as React from 'react';
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface InputProps {
   readonly dataset?: DOMStringMap;
@@ -27,6 +27,6 @@ export interface InputProps {
   onFocus?: (e: any) => void;
   onBlur?: (e: any) => void;
 }
-const Input = factory<InputProps>('input');
+const Input = createRemaxComponent<InputProps>('input');
 
 export default Input;

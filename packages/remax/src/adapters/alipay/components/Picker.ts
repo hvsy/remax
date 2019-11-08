@@ -1,4 +1,4 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface PickerProps {
   readonly dataset?: DOMStringMap;
@@ -10,6 +10,6 @@ export interface PickerProps {
   disabled?: boolean;
   onChange?: (e: any) => void;
 }
-const Picker = factory<PickerProps>('picker');
+const Picker = createRemaxComponent<PickerProps>('picker');
 
 export default Picker;

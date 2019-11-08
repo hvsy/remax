@@ -1,6 +1,7 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
+import { BaseProps } from './baseTyping';
 
-export interface SwitchProps {
+export interface SwitchProps extends BaseProps {
   checked?: boolean;
   disabled?: boolean;
   type?: string;
@@ -8,6 +9,6 @@ export interface SwitchProps {
   color?: string;
 }
 
-const Switch = factory<SwitchProps>('switch');
+const Switch = createRemaxComponent<SwitchProps>('switch');
 
 export default Switch;

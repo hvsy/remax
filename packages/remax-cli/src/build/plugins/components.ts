@@ -98,12 +98,19 @@ function registerComponent({
 
   const hostComponent = adapter.hostComponents(componentName);
 
-  /* istanbul ignore next */
-  if (!hostComponent) {
+  // 不存在的组件，并且不是 remax 开头的用户自定义组件
+  if (!hostComponent && !componentName.startsWith('remax')) {
     return;
   }
 
-  let usedProps = hostComponent.props.slice();
+  componentName = componentName.replace('remax-', '');
+
+  let usedProps: string[] = [];
+
+  if (hostComponent) {
+    usedProps = hostComponent.props.slice();
+  }
+
   if (adapter.name !== 'alipay' && !shouldRegisterAllProps(node)) {
     usedProps = [];
   }
@@ -176,15 +183,18 @@ export default (adapter: Adapter) => {
           const componentPath = binding.path as NodePath;
 
           if (
-            !componentPath ||
-            !t.isImportSpecifier(componentPath.node) ||
-            !t.isImportDeclaration(componentPath.parent) ||
-            !componentPath.parent.source.value.startsWith('remax/')
+            (!componentPath ||
+              !t.isImportSpecifier(componentPath.node) ||
+              !t.isImportDeclaration(componentPath.parent) ||
+              !componentPath.parent.source.value.startsWith('remax/')) &&
+            !tagName.startsWith('Remax')
           ) {
             return;
           }
 
-          const componentName = componentPath.node.imported.name;
+          const componentName = tagName.startsWith('Remax')
+            ? tagName
+            : (componentPath.node as t.ImportSpecifier).imported.name;
           const id = kebabCase(componentName);
 
           registerComponent({

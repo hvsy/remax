@@ -1,4 +1,4 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface NavigatorProps {
   readonly dataset?: DOMStringMap;
@@ -16,6 +16,6 @@ export interface NavigatorProps {
   url: string;
 }
 
-const Navigator = factory<NavigatorProps>('navigator');
+const Navigator = createRemaxComponent<NavigatorProps>('navigator');
 
 export default Navigator;

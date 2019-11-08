@@ -1,9 +1,10 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
+import { BaseProps } from './baseTyping';
 
-export interface LabelProps {
+export interface LabelProps extends BaseProps {
   for?: string;
 }
 
-const Label = factory<LabelProps>('label');
+const Label = createRemaxComponent<LabelProps>('label');
 
 export default Label;

@@ -1,7 +1,7 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 import { BaseProps } from './baseTyping';
 
-const Label = factory<LabelProps>('label');
+const Label = createRemaxComponent<LabelProps>('label');
 
 export interface LabelProps extends BaseProps {
   /** 绑定控件的 id 1.0.0 */

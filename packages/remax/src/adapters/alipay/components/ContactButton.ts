@@ -1,4 +1,4 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface LifestyleProps {
   readonly dataset?: DOMStringMap;
@@ -10,6 +10,6 @@ export interface LifestyleProps {
   alipayCardNo?: string;
 }
 
-const ContractButton = factory<LifestyleProps>('contact-button');
+const ContractButton = createRemaxComponent<LifestyleProps>('contact-button');
 
 export default ContractButton;

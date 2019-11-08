@@ -1,7 +1,7 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 import { BaseProps } from './baseTyping';
 
-const Button = factory<ButtonProps>('button');
+const Button = createRemaxComponent<ButtonProps>('button');
 
 export interface ButtonProps extends BaseProps {
   /**

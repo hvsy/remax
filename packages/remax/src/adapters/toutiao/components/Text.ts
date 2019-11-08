@@ -1,11 +1,12 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
+import { BaseProps } from './baseTyping';
 
-export interface TextProps {
+export interface TextProps extends BaseProps {
   selectable?: boolean;
   space?: string | boolean;
   decode?: boolean;
 }
 
-const Text = factory<TextProps>('text');
+const Text = createRemaxComponent<TextProps>('text');
 
 export default Text;

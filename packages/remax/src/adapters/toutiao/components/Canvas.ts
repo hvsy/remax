@@ -1,9 +1,10 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
+import { BaseProps } from './baseTyping';
 
-export interface CanvasProps {
+export interface CanvasProps extends BaseProps {
   cavasId: string;
 }
 
-const Canvas = factory<CanvasProps>('canvas');
+const Canvas = createRemaxComponent<CanvasProps>('canvas');
 
 export default Canvas;

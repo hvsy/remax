@@ -1,4 +1,4 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface RichTextNode {
   readonly dataset?: DOMStringMap;
@@ -11,6 +11,6 @@ export interface RichTextNode {
 export interface RichTextProps {
   nodes?: RichTextNode[];
 }
-const RichText = factory<RichTextProps>('rich-text');
+const RichText = createRemaxComponent<RichTextProps>('rich-text');
 
 export default RichText;

@@ -1,4 +1,4 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface SwiperProps {
   readonly dataset?: DOMStringMap;
@@ -25,6 +25,6 @@ export interface SwiperProps {
   onAnimationEnd?: (e: any) => void;
 }
 
-const Swiper = factory<SwiperProps>('swiper');
+const Swiper = createRemaxComponent<SwiperProps>('swiper');
 
 export default Swiper;

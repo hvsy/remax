@@ -1,7 +1,7 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 import { BaseProps } from './baseTyping';
 
-const Form = factory<FormProps>('form');
+const Form = createRemaxComponent<FormProps>('form');
 
 export interface FormProps extends BaseProps {
   /** 是否返回 formId 用于发送模板消息 1.0.0  */

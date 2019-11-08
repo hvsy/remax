@@ -1,5 +1,5 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
-const PickerViewColumn = factory('picker-view-column');
+const PickerViewColumn = createRemaxComponent('picker-view-column');
 
 export default PickerViewColumn;

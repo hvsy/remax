@@ -1,6 +1,7 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
+import { BaseProps } from './baseTyping';
 
-export interface VideoProps {
+export interface VideoProps extends BaseProps {
   src?: string;
   autoplay?: boolean;
   poster?: string;
@@ -12,6 +13,6 @@ export interface VideoProps {
   onFullscreenchange?: (e: any) => void;
 }
 
-const Video = factory<VideoProps>('video');
+const Video = createRemaxComponent<VideoProps>('video');
 
 export default Video;

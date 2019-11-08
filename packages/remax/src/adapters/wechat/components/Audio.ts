@@ -1,6 +1,6 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 // 微信已不再维护
-const Audio = factory('audio');
+const Audio = createRemaxComponent('audio');
 
 export default Audio;

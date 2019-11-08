@@ -1,5 +1,5 @@
 import * as React from 'react';
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface CoverViewProps {
   readonly dataset?: DOMStringMap;
@@ -7,6 +7,6 @@ export interface CoverViewProps {
   style?: React.CSSProperties;
   onTap?: (e: any) => void;
 }
-const CoverView = factory<CoverViewProps>('cover-view');
+const CoverView = createRemaxComponent<CoverViewProps>('cover-view');
 
 export default CoverView;

@@ -1,7 +1,7 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 import { BaseProps } from './baseTyping';
 
-const Image = factory<ImageProps>('image');
+const Image = createRemaxComponent<ImageProps>('image');
 
 export interface ImageProps extends BaseProps {
   /**

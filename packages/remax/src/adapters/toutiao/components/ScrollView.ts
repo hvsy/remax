@@ -1,6 +1,7 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
+import { BaseProps } from './baseTyping';
 
-export interface ScrollViewProps {
+export interface ScrollViewProps extends BaseProps {
   scrollX?: boolean;
   scrollY?: boolean;
   upperThreshold?: number;
@@ -14,6 +15,6 @@ export interface ScrollViewProps {
   onScroll?: (e: any) => void;
 }
 
-const ScrollView = factory<ScrollViewProps>('scroll-view');
+const ScrollView = createRemaxComponent<ScrollViewProps>('scroll-view');
 
 export default ScrollView;

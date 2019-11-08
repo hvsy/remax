@@ -1,7 +1,9 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 import { BaseProps } from './baseTyping';
 
-const PickerViewColumn = factory<PickerViewColumnProps>('picker-view-column');
+const PickerViewColumn = createRemaxComponent<PickerViewColumnProps>(
+  'picker-view-column'
+);
 
 export type PickerViewColumnProps = BaseProps;
 

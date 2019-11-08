@@ -1,4 +1,4 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 export interface IconProps {
   readonly dataset?: DOMStringMap;
   id?: string;
@@ -17,6 +17,6 @@ export interface IconProps {
   size?: number;
   color?: string;
 }
-const Icon = factory<IconProps>('icon');
+const Icon = createRemaxComponent<IconProps>('icon');
 
 export default Icon;

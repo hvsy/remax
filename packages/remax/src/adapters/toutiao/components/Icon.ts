@@ -1,5 +1,7 @@
-import factory from './factory';
-export interface IconProps {
+import createRemaxComponent from '../../../createRemaxComponent';
+import { BaseProps } from './baseTyping';
+
+export interface IconProps extends BaseProps {
   type:
     | 'info'
     | 'warn'
@@ -14,6 +16,6 @@ export interface IconProps {
   size?: number;
   color?: string;
 }
-const Icon = factory<IconProps>('icon');
+const Icon = createRemaxComponent<IconProps>('icon');
 
 export default Icon;

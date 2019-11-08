@@ -1,5 +1,5 @@
 import * as React from 'react';
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface PickerViewProps {
   readonly dataset?: DOMStringMap;
@@ -12,6 +12,6 @@ export interface PickerViewProps {
   maskClass?: string;
   onChange?: (e: any) => void;
 }
-const PickerView = factory<PickerViewProps>('picker-view');
+const PickerView = createRemaxComponent<PickerViewProps>('picker-view');
 
 export default PickerView;

@@ -1,4 +1,4 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface SliderProps {
   readonly dataset?: DOMStringMap;
@@ -19,6 +19,6 @@ export interface SliderProps {
   onChange?: (e: any) => void;
   onChanging?: (e: any) => void;
 }
-const Slider = factory<SliderProps>('slider');
+const Slider = createRemaxComponent<SliderProps>('slider');
 
 export default Slider;

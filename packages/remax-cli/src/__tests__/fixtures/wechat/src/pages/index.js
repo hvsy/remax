@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { View, Text } from 'remax/wechat';
+import { View, Text, createRemaxComponent } from 'remax/wechat';
 
 export default () => {
   const props = {};
   const TextElement = React.cloneElement(<Text />);
+  const RemaxFooBar = createRemaxComponent('RemaxFooBar');
 
   function handleClick() {}
 
@@ -11,6 +12,7 @@ export default () => {
 
   return (
     <View>
+      <RemaxFooBar foo="bar" />
       <View
         onClick={handleClick}
         onTouchStart={handleTouchStart}

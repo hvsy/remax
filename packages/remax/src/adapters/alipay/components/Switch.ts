@@ -1,4 +1,4 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface SwitchProps {
   readonly dataset?: DOMStringMap;
@@ -12,6 +12,6 @@ export interface SwitchProps {
   onChange?: (e: any) => void;
 }
 
-const Switch = factory<SwitchProps>('switch');
+const Switch = createRemaxComponent<SwitchProps>('switch');
 
 export default Switch;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface ViewProps {
   readonly dataset?: DOMStringMap;
@@ -32,6 +32,6 @@ export interface ViewProps {
   onFirstAppear?: (e: any) => void;
 }
 
-const View = factory<ViewProps>('view');
+const View = createRemaxComponent<ViewProps>('view');
 
 export default View;

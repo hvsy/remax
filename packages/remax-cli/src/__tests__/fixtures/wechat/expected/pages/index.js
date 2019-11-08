@@ -12,6 +12,7 @@ require('../npm/remax/esm/createAppConfig.js');
 require('../npm/remax/esm/Platform.js');
 var createPageConfig = require('../npm/remax/esm/createPageConfig.js');
 require('../npm/remax/esm/index.js');
+var createRemaxComponent = require('../npm/remax/esm/createRemaxComponent.js');
 var View = require('../npm/remax/esm/adapters/wechat/components/View.js');
 require('../npm/remax/esm/adapters/wechat/components/Input.js');
 require('../npm/remax/esm/adapters/wechat/components/Textarea.js');
@@ -57,12 +58,15 @@ require('../npm/remax/esm/adapters/wechat/api.js');
 var _page = function _page() {
   var props = {};
   var TextElement = React.cloneElement(React.createElement(Text.default, null));
+  var RemaxFooBar = createRemaxComponent.createCustomRemaxComponent('RemaxFooBar');
 
   function handleClick() {}
 
   function handleTouchStart() {}
 
-  return React.createElement(View.default, null, React.createElement(View.default, _rollupPluginBabelHelpers.extends({
+  return React.createElement(View.default, null, React.createElement(RemaxFooBar, {
+    foo: "bar"
+  }), React.createElement(View.default, _rollupPluginBabelHelpers.extends({
     onClick: handleClick,
     onTouchStart: handleTouchStart,
     id: "view",

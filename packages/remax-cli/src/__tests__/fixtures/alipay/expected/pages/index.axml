@@ -85,6 +85,17 @@
 </template>
 
   
+  <template name="REMAX_TPL_1_foo-bar">
+  <foo-bar  foo="{{item.props['foo']}}" >
+    
+    <block a:for="{{item.children}}" key="{{item.id}}">
+      <template is="REMAX_TPL_1_CONTAINER" data="{{item: item}}" />
+    </block>
+    
+  </foo-bar>
+</template>
+
+  
   <template name="REMAX_TPL_1_form">
   <form  class="{{item.props['class']}}"  style="{{item.props['style']}}"  report-submit="{{item.props['report-submit']}}"  onSubmit="{{item.props['onSubmit']}}"  onReset="{{item.props['onReset']}}" >
     

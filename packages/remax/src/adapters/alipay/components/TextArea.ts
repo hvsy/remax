@@ -1,4 +1,4 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 import * as React from 'react';
 
 export interface TextareaProps {
@@ -22,6 +22,6 @@ export interface TextareaProps {
   onConfirm?: (e: any) => void;
 }
 
-const Textarea = factory<TextareaProps>('textarea');
+const Textarea = createRemaxComponent<TextareaProps>('textarea');
 
 export default Textarea;

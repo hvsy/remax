@@ -1,5 +1,5 @@
 import * as React from 'react';
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface ImageProps {
   readonly dataset?: DOMStringMap;
@@ -15,6 +15,6 @@ export interface ImageProps {
   onClick?: (e: any) => void;
   catchTap?: (e: any) => void;
 }
-const Image = factory<ImageProps>('image');
+const Image = createRemaxComponent<ImageProps>('image');
 
 export default Image;

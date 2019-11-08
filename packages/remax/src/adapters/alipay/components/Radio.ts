@@ -1,4 +1,4 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface RadioProps {
   readonly dataset?: DOMStringMap;
@@ -10,6 +10,6 @@ export interface RadioProps {
   color?: string;
 }
 
-const Radio = factory<RadioProps>('radio');
+const Radio = createRemaxComponent<RadioProps>('radio');
 
 export default Radio;

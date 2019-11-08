@@ -1,7 +1,8 @@
 import { CSSProperties } from 'react';
-import factory from './factory';
+import { BaseProps } from './baseTyping';
+import createRemaxComponent from '../../../createRemaxComponent';
 
-export interface InputProps {
+export interface InputProps extends BaseProps {
   focus?: boolean;
   maxlength?: number;
   value: string;
@@ -23,4 +24,4 @@ export interface InputProps {
   onConfirm?: () => void;
 }
 
-export default factory<InputProps>('input');
+export default createRemaxComponent<InputProps>('input');

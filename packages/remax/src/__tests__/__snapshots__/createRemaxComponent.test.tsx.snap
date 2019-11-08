@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createCustomRemaxComponent create component with remax prefix 1`] = `
+<custom-component
+  foo="bar"
+/>
+`;

@@ -1,10 +1,10 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 
 export interface LabelProps {
   readonly dataset?: DOMStringMap;
   id?: string;
   for?: string;
 }
-const Label = factory<LabelProps>('label');
+const Label = createRemaxComponent<LabelProps>('label');
 
 export default Label;

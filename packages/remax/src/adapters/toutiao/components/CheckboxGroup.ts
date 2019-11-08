@@ -1,9 +1,12 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
+import { BaseProps } from './baseTyping';
 
-export interface CheckboxGroupProps {
+export interface CheckboxGroupProps extends BaseProps {
   onChange?: (e: any) => void;
 }
 
-const CheckboxGroup = factory<CheckboxGroupProps>('checkbox-group');
+const CheckboxGroup = createRemaxComponent<CheckboxGroupProps>(
+  'checkbox-group'
+);
 
 export default CheckboxGroup;

@@ -1,7 +1,9 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 import { BaseProps } from './baseTyping';
 
-const OfficialAccount = factory<OfficialAccountProps>('official-account');
+const OfficialAccount = createRemaxComponent<OfficialAccountProps>(
+  'official-account'
+);
 
 export interface OfficialAccountProps extends BaseProps {
   /** 组件加载成功时触发 */

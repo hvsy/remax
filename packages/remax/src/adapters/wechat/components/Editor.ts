@@ -1,7 +1,7 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 import { BaseProps } from './baseTyping';
 
-const Editor = factory<EditorProps>('editor');
+const Editor = createRemaxComponent<EditorProps>('editor');
 
 export interface EditorProps extends BaseProps {
   /** 设置编辑器为只读 2.7.0  */

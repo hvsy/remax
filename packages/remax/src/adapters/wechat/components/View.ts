@@ -1,7 +1,7 @@
-import factory from './factory';
+import createRemaxComponent from '../../../createRemaxComponent';
 import { BaseProps } from './baseTyping';
 
-const View = factory<ViewProps>('view');
+const View = createRemaxComponent<ViewProps>('view');
 
 export interface ViewProps extends BaseProps {
   slot?: string;
